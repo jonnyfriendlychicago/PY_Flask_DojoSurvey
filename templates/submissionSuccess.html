@@ -19,10 +19,18 @@
                 <p class="formLabels">Your Name: {{session.yourName}}<p>
                 <p class="formLabels">Dojo Location: {{session.dojoLocation}}</p>
                 <p class="formLabels">Favorite Language: {{session.favoriteLanguage}}</p>
-                <!--                 
+                
                 <p class="formLabels">Comment:</p>
-                <p class="formLabels">Favorite TA(s): {{session.favoriteDojoTa}}<p>
-                 -->
+                <p class="formLabels">{{session.comment}}</p>
+                
+                <p class="formLabels">Favorite TA(s): </p>
+                
+                    {% for i in session.favoriteDojoTa: %}
+                    <p class="formLabels">
+                    {{i}}
+                    </p>
+                    {%endfor%}
+                
                     <a class="btn btn-primary btn-lg btn-block" href="/">Return to Survey</a>
             </div>
         </div>

@@ -12,20 +12,15 @@ app.secret_key = 'ESR4T4RWT2345tyu'
 @app.route('/')
 def beHome():
     return render_template("index.html")
-    # if "counterCount" not in session: 
-    #     session['counterCount'] = 0
-    # else:
-    #     session['counterCount'] += 1
-    # return render_template("index.html")
 
 @app.route('/submissionSuccess', methods=['Post'])
 def submissionSuccess():
-    # session.favoriteDojoTaList = []
     session['yourName'] = request.form['yourName']
     session['dojoLocation'] = request.form['dojoLocation']
     session['favoriteLanguage'] = request.form['favoriteLanguage']
-    # session['favoriteDojoTa'] = request.form['favoriteDojoTa']
-    # print(session['favoriteDojoTa'])
+    session['favoriteDojoTa'] = request.form.getlist('favoriteDojoTa')
+    session['comment'] = request.form['comment']
+
     return redirect('/displaySubmissionSuccess')
 
 @app.route('/displaySubmissionSuccess')

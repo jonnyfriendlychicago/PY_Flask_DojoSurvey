@@ -18,9 +18,10 @@
             <div class="formContainer01"> 
                 <h2>Dojo Survey</h2>
                 <form action="/submissionSuccess" method="post">
-                    <label class="formLabels" for="yourName">Your Name:</label>
-                    <input class="inputTextOneLiner" type="text" name="yourName" placeholder="type it here, man" value="">
-                    
+                    <div class="formSelectSameLine">
+                        <label class="formLabels" for="yourName">Your Name:</label>
+                        <input class="inputTextOneLiner" type="text" name="yourName" placeholder="type it here, man" value="">
+                    </div>
                     <div class="formSelectSameLine">
                         <p class="formLabels">Dojo Location:</p>
                         <select name="dojoLocation"> 
@@ -30,7 +31,6 @@
                         </select>
                     </div>
                     
-                    
                     <div class="formSelectSameLine">
                         <p class="formLabels">Favorite Language:</p>
                         <select name="favoriteLanguage"> 
@@ -39,7 +39,7 @@
                             <option value=".net">.net</option>
                         </select>
                     </div>
-<!--                     
+
                     <div class="formSelectSameLine">
                         <p class="formLabels">Favorite Dojo TA(s):</p>                        
                         <input type="checkbox" name="favoriteDojoTa" value="Mel-B"/>
@@ -47,12 +47,11 @@
                         <input type="checkbox" name="favoriteDojoTa" value="Brandon-C"/>
                         <label class="formLabels">Brandon-C</label>
                     </div> 
-                -->
-
-                    <!--
+                    
                     <p class="formLabels">Comment (optional):</p>
-                    <textarea class="inputTextArea" name="comment">Enter comments...</textarea>  
-                    -->
+                    <textarea class="inputTextArea" name="comment" placeholder="Enter comments..."></textarea>  
+                    <!-- <input class="inputTextOneLiner" type="text" name="yourName" placeholder="type it here, man" value=""> -->
+                    
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
                 </form>
             </div>
