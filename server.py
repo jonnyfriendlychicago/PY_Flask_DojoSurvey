@@ -4,11 +4,6 @@ from flask import Flask, render_template, request, redirect, session # Import Fl
 app = Flask(__name__)    # Create a new instance of the Flask class called "app"
 app.secret_key = 'ESR4T4RWT2345tyu' 
 
-
-# @app.route('/')          
-# def welcome():
-#     return render_template("index.html", horizDispCount = 1, vertDispCount = 1, color1 = "red", color2 = "black", displayValMsg = defaultValidationMsg, displayValStyle = defaultValStyle)
-
 @app.route('/')
 def beHome():
     return render_template("index.html")
